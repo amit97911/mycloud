@@ -62,3 +62,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+Notes:
+1. Update php.ini file
+    max_input_vars = 1500
+    max_execution_time = 300
+    post_max_size=50M
+    upload_max_filesize=50M
+2. 
