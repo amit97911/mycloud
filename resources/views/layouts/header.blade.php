@@ -41,35 +41,32 @@
 </head>
 
 <body>
-    {{-- <a type="button" class="btn btn-danger btn-floating btn-lg" id="bottom-upload-button" href="{{ url('upload') }}">
-        <i class="bi bi-upload"></i>
-    </a> --}}
-    <button type="button" class="btn btn-danger" id="bottom-upload-button" data-bs-toggle="modal"
-        data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-danger btn-floating btn-l" data-bs-toggle="modal" id="bottom-upload-button"
+        data-bs-target="#UploadModal">
         <i class="bi bi-upload"></i>
     </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Upload Modal -->
+    <div class="modal fade" id="UploadModal" tabindex="-1" aria-labelledby="UploadModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">File Upload</h5>
+                    <p class="fs-6 text-danger do-not-leave">Please do not leave the page</p>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="text-danger fs-6 text-center">Advised to upload smaller files</div>
-                    <form id="fileUploadForm" method="POST" enctype="multipart/form-data">
+                    <form class="fileUploadForm" action="{{ url('upload') }}" method="POST"
+                        enctype="multipart/form-data">
                         @csrf
                         <div class="form-group mb-3">
                             <input name="upload_file[]" type="file" class="form-control" multiple required>
                             <div id="error" class="text-danger"></div>
                         </div>
-                        <div class="d-grid mb-3">
-                            <input type="submit" value="Submit" class="btn btn-primary" id="submit-upload">
+                        <div class="form-group mb-3">
+                            <input type="submit" value="Submit" class="btn btn-primary">
                         </div>
                         <div class="form-group">
-                            <div class="progress">
+                            <div class="progress upload-progress">
                                 <div class="progress-bar progress-bar-striped progress-bar-animated bg-info"
                                     role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
                                     style="width: 0%"></div>
