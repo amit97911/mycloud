@@ -39,7 +39,7 @@
         }
 
         .filename{
-            width: 120px;
+            width: 100px;
             height: 25px; 
             overflow: hidden;
             white-space: nowrap;

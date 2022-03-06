@@ -4,7 +4,7 @@
     <div class="row user-select-none">
 
         @php
-            $files = ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1'];
+            $files = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'];
         @endphp
         @foreach ($files as $file)
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
@@ -12,9 +12,10 @@
                     <div class="card-header p-0 m-0">
                         <div class="float-start align-middle">
                             <div class="input-group m-1">
-                                <input class="form-check-input checkbox" type="checkbox" name="file_checkbox[]" value="">
-                                <p class="mx-1 filename">2024-04-14 14:30:27</p>
-                                <p>.jpg</p>
+                                {{--use id for id-html --}}
+                                <input class="form-check-input checkbox" id="checkbox{{$file}}" type="checkbox" name="file_checkbox[]" value="">
+                                <label for="checkbox{{$file}}" class="ms-1 filename">filename 2024-04-14 14:30:27</label>
+                                <label for="checkbox{{$file}}">.mp345</label>
                             </div>
                         </div>
                         <div class="float-end">
@@ -34,15 +35,8 @@
                     <img src="{{ asset('thumbnail/train-1645281525237-484 (8th copy).jpg') }}" class="card-img-top"
                         alt="...">
                     <div class="card-body container d-none d-md-block">
-                        <div class="row overflow-hidden">
-                            <div class="col-md-6 text card-text mb-0">
-                                32.2mb
-                            </div>
-                            <div class="col-md-6 text card-text mb-0">
-                                05 may 2024
-                            </div>
-                        </div>
-                        <small class="file-accessed text-muted">Last accessed: 2 months ago</small>
+                        <small class="file-accessed text-muted float-start">22.21mb</small>
+                        <small class="file-accessed text-muted float-end">05 may 2024</small>
                     </div>
                 </div>
             </div>
@@ -136,6 +130,7 @@
 
 
         <script>
+            //check on page load
             $(".checkbox").click(function() {
                 if ($('.checkbox').is(':checked')) {
                     console.log("Checked");
@@ -143,5 +138,6 @@
                     console.log("Not Checked");
                 }
             });
+
         </script>
     @stop
