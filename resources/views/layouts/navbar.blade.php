@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top p-0 m-0">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -15,6 +15,10 @@
                     <li class="nav-item">
                         <a class="nav-link @if ($active == 'upload') active @endif"
                             href="{{route('upload-index')}}">Upload</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @if ($active == 'shared') active @endif"
+                            href="{{route('shared-index')}}">Shared</a>
                     </li>
                 </ul>
             @endisset

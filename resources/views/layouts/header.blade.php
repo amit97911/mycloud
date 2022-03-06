@@ -35,7 +35,23 @@
             position: fixed;
             bottom: 5%;
             right: 3%;
+            z-index:3;
         }
+
+        .filename{
+            width: 120px;
+            height: 25px; 
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+        }
+        /* .text {
+            display: block;
+            width: 100px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        } */
 
     </style>
 </head>
