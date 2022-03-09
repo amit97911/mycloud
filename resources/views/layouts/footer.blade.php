@@ -1,9 +1,4 @@
 <script>
-    $(document).ready(function() {
-        $('.upload-progress').hide();
-        $('.do-not-leave').hide();
-    });
-
     $('.fileUploadForm').ajaxForm({
         beforeSend: function() {
             var percentage = '0';
@@ -26,6 +21,12 @@
             }
         }
     });
+
+    //tooltip
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
 integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="

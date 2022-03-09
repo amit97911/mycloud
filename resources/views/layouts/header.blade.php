@@ -28,6 +28,16 @@
         channel.bind('my-event', function(data) {
             toastr.info(JSON.stringify(data.message));
         });
+
+        $(document).ready(function() {
+            $('.upload-progress').hide();
+            $('.do-not-leave').hide();
+            if ($('.checkbox').is(':checked')) {
+                $('.menu-icons').show();
+            } else {
+                $('.menu-icons').hide();
+            }
+        });
     </script>
 
     <style>
@@ -35,16 +45,17 @@
             position: fixed;
             bottom: 5%;
             right: 3%;
-            z-index:3;
+            z-index: 3;
         }
 
-        .filename{
+        .filename {
             width: 100px;
-            height: 25px; 
+            height: 25px;
             overflow: hidden;
             white-space: nowrap;
-            text-overflow:ellipsis;
+            text-overflow: ellipsis;
         }
+
         /* .text {
             display: block;
             width: 100px;

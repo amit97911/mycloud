@@ -12,10 +12,12 @@
                     <div class="card-header p-0 m-0">
                         <div class="float-start align-middle">
                             <div class="input-group m-1">
-                                {{--use id for id-html --}}
-                                <input class="form-check-input checkbox" id="checkbox{{$file}}" type="checkbox" name="file_checkbox[]" value="">
-                                <label for="checkbox{{$file}}" class="ms-1 filename">filename 2024-04-14 14:30:27</label>
-                                <label for="checkbox{{$file}}">.mp345</label>
+                                {{-- use id for id-html --}}
+                                <input class="form-check-input checkbox" id="checkbox{{ $file }}" type="checkbox"
+                                    name="file_checkbox[]" value="">
+                                <label for="checkbox{{ $file }}" class="ms-1 filename">filename 2024-04-14
+                                    14:30:27</label>
+                                <label for="checkbox{{ $file }}">.mp345</label>
                             </div>
                         </div>
                         <div class="float-end">
@@ -133,11 +135,10 @@
             //check on page load
             $(".checkbox").click(function() {
                 if ($('.checkbox').is(':checked')) {
-                    console.log("Checked");
+                    $('.menu-icons').show();
                 } else {
-                    console.log("Not Checked");
+                    $('.menu-icons').hide();
                 }
             });
-
         </script>
     @stop
